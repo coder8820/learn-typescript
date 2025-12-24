@@ -25,6 +25,13 @@ function addNumbers(a: number, b: number): number {
     return a + b;
 }
 
+// This function takes three parameters: a string, a number, and a boolean, and returns a string
+function describeUser(name: string, age: number, isMember: boolean): string {
+    return `${name} is ${age} years old and membership status is ${isMember}.`;
+}
+// calling the function
+console.log(describeUser("Anam", 23, true))
+
 // Calling the function
 let result: number = addNumbers(10, 20);
 
