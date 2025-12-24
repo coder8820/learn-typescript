@@ -26,7 +26,7 @@ function addNumbers(a: number, b: number): number {
 }
 
 // Calling the function
-let result: number = addNumbers(5, 10);
+let result: number = addNumbers(10, 20);
 
 // Printing function result
 console.log("Sum:", result);
