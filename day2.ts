@@ -45,7 +45,7 @@ type User = {
     username: string;
 }
 // Enum
-enum Direction{
+enum Direction {
     Up,
     Down,
     Left,
@@ -53,3 +53,49 @@ enum Direction{
 }
 let dir: Direction = Direction.Up;
 console.log(dir);
+
+enum role {
+    Admin = 'ADMIN',
+    User = 'USER',
+    Guest = 'GUEST'
+}
+let userRole: role = role.Admin;
+console.log(userRole);
+
+// literal type
+// a variable that can only hold specific string values
+let literalVar: "success" | "Failure";
+literalVar = "success";
+
+// 4. Function Data Types
+// Explain: Function parameters and return types can be explicitly typed in TypeScript.
+function add(a: number, b: number): number {
+    return a + b;
+}
+let sum: number = add(5, 10);
+console.log("Sum:", sum);
+
+function great(name: string): void {
+    console.log("Hello, " + name);
+}
+great("Bob");
+
+// Function with optional parameter
+function greetOptional(name: string, greeting?: string): void {
+    if (greeting) {
+        console.log(greeting + ", " + name);
+    }
+    else {
+        console.log("Hello, " + name);
+    }
+}
+
+greetOptional("Charlie");
+greetOptional("Dave", "Good Morning");
+
+// Function with default parameter
+function greetDefault(name: string, greeting: string = "Hi"): void {
+    console.log(greeting + ", " + name);
+}
+greetDefault("Eve");
+greetDefault("Frank", "Welcome");
